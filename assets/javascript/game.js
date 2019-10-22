@@ -1,5 +1,5 @@
 
-
+ $(document).ready(function() {
 //Creates a random number to start the score
 var randomScore = Math.floor((Math.random() * 20) + 15);
 
@@ -39,12 +39,36 @@ $("#one").on("click", function(){
     randomScore= randomScore+crystalNumbers[0];
     //shows it on the screen
     $("#total").text(randomScore)
+    if (randomNumber === randomScore){
+        won();
+
+    }
+   
+
+
+    if (randomNumber<randomScore){
+
+        loser();
+    }
+
     
 });
 //second
 $("#two").on("click", function(){
     randomScore= randomScore+crystalNumbers[1];
     $("#total").text(randomScore)
+    if (randomNumber === randomScore){
+        won();
+
+    }
+   
+
+
+    if (randomNumber<randomScore){
+
+        loser();
+    }
+
     
 });
 //third
@@ -53,12 +77,36 @@ $("#three").on("click", function(){
     randomScore= randomScore+crystalNumbers[2];
     //shows it on the screen
     $("#total").text(randomScore)
+    if (randomNumber === randomScore){
+        won();
+
+    }
+   
+
+
+    if (randomNumber<randomScore){
+
+        loser();
+    }
+
     
     });
     //fourth
     $("#four").on("click", function(){
         randomScore= randomScore+crystalNumbers[3];
         $("#total").text(randomScore)
+        if (randomNumber === randomScore){
+            won();
+    
+        }
+       
+    
+    
+        if (randomNumber<randomScore){
+    
+            loser();
+        }
+    
         
     });
 
@@ -105,17 +153,16 @@ function reset(){
     }
 
 
-    if (randomNumber === randomScore){
-        won();
+    // if (randomNumber === randomScore){
+    //     won();
 
-    }
+    // }
    
 
 
-    if (randomScore>randomNumber){
+    // if (randomNumber<randomScore){
 
-        loser();
-    }
+    //     loser();
+    // }
 
- 
-
+});
